@@ -772,7 +772,9 @@ public class UIViewOperationQueue {
                   for (UIOperation op : nonBatchedOperations) {
                     if(op != null){
                       op.execute();
-                      throw new Exception("HARR USING CUSTOM FORK!");
+                      FLog.e(
+                        ReactConstants.TAG,
+                        "UIViewOperationQueue ok op " + batchedOperations.toString());
                     } else {
                       FLog.e(
                               ReactConstants.TAG,
@@ -785,7 +787,9 @@ public class UIViewOperationQueue {
                   for (UIOperation op : batchedOperations) {
                     if(op != null){
                       op.execute();
-                      throw new Exception("HARR USING CUSTOM FORK2!");
+                      FLog.e(
+                        ReactConstants.TAG,
+                        "UIViewOperationQueue ok op " + batchedOperations.toString());
                     } else {
                       FLog.e(
                               ReactConstants.TAG,
