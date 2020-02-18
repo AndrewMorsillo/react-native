@@ -772,9 +772,9 @@ public class UIViewOperationQueue {
                   for (UIOperation op : nonBatchedOperations) {
                     if(op != null){
                       op.execute();
-                      FLog.e(
-                        ReactConstants.TAG,
-                        "UIViewOperationQueue ok op " + batchedOperations.toString());
+//                      FLog.e(
+//                        ReactConstants.TAG,
+//                        "UIViewOperationQueue ok op " + batchedOperations.toString());
                     } else {
                       FLog.e(
                               ReactConstants.TAG,
@@ -787,9 +787,9 @@ public class UIViewOperationQueue {
                   for (UIOperation op : batchedOperations) {
                     if(op != null){
                       op.execute();
-                      FLog.e(
-                        ReactConstants.TAG,
-                        "UIViewOperationQueue ok op " + batchedOperations.toString());
+//                      FLog.e(
+//                        ReactConstants.TAG,
+//                        "UIViewOperationQueue ok op " + batchedOperations.toString());
                     } else {
                       FLog.e(
                               ReactConstants.TAG,
