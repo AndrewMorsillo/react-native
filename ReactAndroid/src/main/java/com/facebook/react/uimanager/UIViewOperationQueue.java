@@ -783,13 +783,19 @@ public class UIViewOperationQueue {
                 // regular operations may depend on them
                 if (nonBatchedOperations != null) {
                   for (UIOperation op : nonBatchedOperations) {
+                        if (op != null) {
                     op.execute();
+                      
+                    }
                   }
                 }
 
                 if (batchedOperations != null) {
-                  for (UIOperation op : batchedOperations) {
+                      for (UIOperation op : batchedOperations) {
+                            if (op != null) {
                     op.execute();
+                      
+                    }
                   }
                 }
 
