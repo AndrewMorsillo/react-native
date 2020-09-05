@@ -908,13 +908,25 @@ public class UIViewOperationQueue {
                 // regular operations may depend on them
                 if (nonBatchedOperations != null) {
                   for (UIOperation op : nonBatchedOperations) {
-                    op.execute();
+                    if(op != null){
+                      op.execute();
+                    } else {
+                      FLog.e(
+                        ReactConstants.TAG,
+                        "UIOperation in nonBatchedOperations was null!");
+                    }
                   }
                 }
 
                 if (batchedOperations != null) {
                   for (UIOperation op : batchedOperations) {
-                    op.execute();
+                    if(op != null){
+                      op.execute();
+                    } else {
+                      FLog.e(
+                        ReactConstants.TAG,
+                        "UIOperation in batchedOperations was null!");
+                    }
                   }
                 }
 
